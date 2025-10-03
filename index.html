@@ -17,49 +17,86 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <h1 class="header__logo">
-        <a href="#">
-          <img src="img/logo.png" alt="#">
-        </a>
-      </h1>
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="#">この農園について</a>
-          </li>
-          <li class="header__item">
-            <a href="#">製品一覧</a>
-          </li>
-          <li class="header__item">
-            <a href="#">お知らせ</a>
-          </li>
-          <li class="header__item">
-            <a href="#">FAQ</a>
-          </li>
-          <li class="header__item">
-            <a href="#">アクセス</a>
-          </li>
-          <li class="header__item">
-            <a href="#">お問い合わせ</a>
-          </li>
-        </ul>
-      </nav>
-      <button type="button" class="spMenu__btn toggleBtn">
-        <div class="spMenu__inner">
-          <span class="menu__bar"></span>
-          <span class="menu__bar"></span>
-          <span class="menu__bar"></span>
+    <div class="header__pc">
+      <div class="container">
+        <nav class="header__nav">
+          <ul class="header__navList">
+            <li class="header__navItem">
+              <a href="#">この農園について</a>
+            </li>
+            <li class="header__navItem">
+              <a href="#">製品一覧</a>
+            </li>
+            <li class="header__navItem">
+              <a href="#">お知らせ</a>
+            </li>
+            <li class="header__navItem">
+              <a href="#">FAQ</a>
+            </li>
+            <li class="header__navItem">
+              <a href="#">アクセス</a>
+            </li>
+            <li class="header__navItem">
+              <a href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header__sp">
+      <div class="spMenu">
+        <button type="button" class="spMenu__btn toggleBtn">
+          <div class="spMenu__btnWrapper">
+            <span class="spMenu__btnLine"></span>
+            <span class="spMenu__btnLine"></span>
+            <span class="spMenu__btnLine"></span>
+          </div>
+        </button>
+        <div class="spMenu__wrapper">
+          <div class="spMenu__wrapperLogo">
+            <img src="img/logo.png" alt="#">
+          </div>
+          <nav class="dropdownMenu">
+            <ul class="dropdownMenu__list">
+              <li class="dropdownMenu__item">
+                <a href="#">この農園について</a>
+              </li>
+              <li class="dropdownMenu__item">
+                <a href="#">製品一覧</a>
+              </li>
+              <li class="dropdownMenu__item">
+                <a href="#">お知らせ</a>
+              </li>
+              <li class="dropdownMenu__item">
+                <a href="#">FAQ</a>
+              </li>
+              <li class="dropdownMenu__item">
+                <a href="#">アクセス</a>
+              </li>
+              <li class="dropdownMenu__item">
+                <a href="#">お問い合わせ</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </button>
+      </div>
     </div>
   </header>
   <main>
     <div class="mv">
       <div class="container">
-        <h2>あなたは知ってる？<br>
-          蓼科を丸ごと味わう<br>
-          喜びを</h2>
+        <h1 class="mv__logo">
+          <div class="mv__logoMark">
+            <a href="#">
+              <img src="img/logo.png" alt="#">
+            </a>
+          </div>
+        </h1>
+        <div class="copy">
+          <h2>あなたは知ってる？</h2>
+          <h2>蓼科を丸ごと味わう</h2>
+          <h2>喜びを</h2>
+        </div>
       </div>
     </div>
     <section class="about">
@@ -271,73 +308,75 @@
               </tr>
               <tr>
                 <th>
-                  <div class="inputlabel">
-                    お名前
-                    <span class="require">必須</span>
-                  </div>
+                  <label for="name">お名前</label>
+                  <span class="require">必須</span>
                 </th>
                 <td>
-                  <div class="nameLayout">
-                    <div class="inputField">
-                      <label for="name">お名前</label>
-                      <input type="text" name="name" required>
-                    </div>
+                  <div class="inputField">
+                    <input type="text" name="name" required>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="address__number">郵便番号</label>
+                </th>
+                <td>
+                  <div class="inputField">
+                    <input type="text" name="address__number">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="address">ご住所</label>
+                  <span class="require">必須</span>
+                </th>
+                <td>
+                  <div class="inputField">
+                    <input type="text" name="address">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="email">メールアドレス</label>
+                  <span class="require">必須</span>
+                </th>
+                <td>
+                  <div class="inputField">
+                    <input type="email" name="email">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="tel">電話番号</label>
+                  <span class="require">必須</span>
+                </th>
+                <td>
+                  <div class="inputField">
+                    <input type="tel" name="tel">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="comment">お問い合わせ内容</label>
+                  <span class="require">必須</span>
+                </th>
+                <td>
+                  <div class="inputField">
+                    <textarea name="comment" id="comment"></textarea>
                   </div>
                 </td>
               </tr>
             </table>
-
-            <!-- <div class="contact__formInner">
-              <div class="contact__formGroup">
-                <label for="name">
-                  お名前
-                  <span class="contact__mark">必須</span>
-                </label>
-                <input type="text" name="your-name">
-              </div>
-              <div class="contact__formGroup">
-                <label for="post">
-                  郵便番号
-                </label>
-                <input type="text" name="your-post">
-              </div>
-              <div class="contact__formGroup">
-                <label for="address">
-                  ご住所
-                  <span class="contact__mark">必須</span>
-                </label>
-                <input type="text" name="your-address">
-              </div>
-              <div class="contact__formGroup">
-                <label for="email">
-                  メールアドレス
-                  <span class="contact__mark">必須</span>
-                </label>
-                <input type="text" name="your-email">
-              </div>
-              <div class="contact__formGroup">
-                <label for="tel">
-                  電話番号
-                  <span class="contact__mark">必須</span>
-                </label>
-                <input type="tel" name="your-tel">
-              </div>
-              <div class="contact__formGroup">
-                <label for="comment">
-                  お問い合わせ内容
-                  <span class="contact__mark">必須</span>
-                </label>
-                <textarea name="comment"></textarea>
-              </div>
-              <div class="contact__formGroup">
-                <div class="contact__formBtn">
-                  <input type="submit" name="submit" value="送信する">
-                </div>
-              </div>
-            </div> -->
+            <div class="buttonArea">
+              <input type="submit" name="submit" value="送信する">
+            </div>
           </form>
         </div>
-      </div>
       </div>
     </section>
   </main>
