@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -88,7 +89,7 @@
         <h1 class="mv__logo">
           <div class="mv__logoMark">
             <a href="#">
-              <img src="img/logo.png" alt="#">
+              <img src="img/logo-01.png" alt="#">
             </a>
           </div>
         </h1>
@@ -101,11 +102,17 @@
     </div>
     <section class="about">
       <div class="container">
-        <h2 class="about__ttl">蓼科の生きた豊かな恵みをそのままに</h2>
-        <figure class="about__fig">
-          <img src="img/about-01.jpg" alt="#">
-          <img src="img/about-02.jpg" alt="#">
-        </figure>
+        <h2 class="about__ttl">蓼科の生きた豊かな恵みを<br class="sp-only">そのままに</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/about-01.jpg" alt="#">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/about-02.jpg" alt="#">
+            </div>
+          </div>
+        </div>
         <div class="about__text">
           <p>「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、蓼科の自然環境を大切に守り、後世に残すことを使命としています。</p>
           <p>私たちは、農業に従事する者として、土地や水、空気といった自然環境がもたらす恩恵に感謝し、その恩恵を受け継ぐ未来の世代にも、同じような恩恵を受け継ぐことができるよう、最善を尽くしています。</p>
@@ -117,68 +124,70 @@
     </section>
     <section class="product">
       <div class="container">
-        <h2 class="product__ttl">製品一覧</h2>
-        <ul class="product__list">
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/strawberries.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</p>
-              <p class="product__price">￥ 4,800（税込）</p>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/grapes.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</p>
-              <p class="product__price">￥ 7,700（税込）</p>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/brussels-sprouts.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</p>
-              <p class="product__price">￥ 4,200（税込）</p>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/strawberries.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</p>
-              <p class="product__price">￥ 4,800（税込）</p>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/grapes.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</p>
-              <p class="product__price">￥ 7,700（税込）</p>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__pic">
-              <img src="img/brussels-sprouts.jpg" alt="#">
-            </div>
-            <div class="product__text">
-              <p class="product__desc">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</p>
-              <p class="product__price">￥ 4,200（税込）</p>
-            </div>
-          </li>
-        </ul>
+        <h2 class="tittle">製品一覧</h2>
+        <div class="swiper" id="product__swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/strawberries.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</p>
+                <p class="product__price">￥ 4,800（税込）</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/grapes.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</p>
+                <p class="product__price">￥ 7,700（税込）</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/brussels-sprouts.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</p>
+                <p class="product__price">￥ 4,200（税込）</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/strawberries.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</p>
+                <p class="product__price">￥ 4,800（税込）</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/grapes.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</p>
+                <p class="product__price">￥ 7,700（税込）</p>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="product__pic">
+                <img src="img/brussels-sprouts.jpg" alt="#">
+              </div>
+              <div class="product__text">
+                <p class="product__desc">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</p>
+                <p class="product__price">￥ 4,200（税込）</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="news">
       <div class="container">
-        <h2 class="news__ttl">お知らせ</h2>
+        <h2 class="tittle">お知らせ</h2>
         <ul class="news__list">
           <li class="news__item">
             <div class="news__date">2023/06/12</div>
@@ -201,32 +210,29 @@
     </section>
     <section class="faq">
       <div class="container">
-        <!-- <picture>
-          <img src="img/grapes-middle.jpg" alt="#">
-        </picture> -->
-        <h2 class="faq__ttl">FAQ</h2>
+        <h2 class="tittle">FAQ</h2>
         <div class="faq__area">
-          <details class="">
-            <summary class="">冷蔵便で配送できますか？</summary>
-            <p class="">冷蔵便に対応しています。その場合別途150円かかります。</p>
+          <details class="details">
+            <summary class="details__summary">冷蔵便で配送できますか？</summary>
+            <p class="details__cont">冷蔵便に対応しています。その場合別途150円かかります。</p>
           </details>
-          <details class="">
-            <summary class="">どのような支払い方法がありますか？</summary>
-            <p class="">
+          <details class="details">
+            <summary class="details__summary">どのような支払い方法がありますか？</summary>
+            <p class="details__cont">
               商品代引きとクレジットカード決済があります。代引き手数料は、10,800円未満で税込330円・10,800円以上32,400円未満で税込440円・32,400円以上102,400円未満で税込660円です。手数料はお客様のご負担となりますのでご了承ください。クレジットカード決済は、JCB・VISA・master・ダイナース・アメリカンエキスプレスのマークが入っているカードすべてご利用になれます。
             </p>
           </details>
-          <details class="">
-            <summary class="">プレゼント用にラッピングすることはできますか？</summary>
-            <p class="">可能です。ラッピングが必要な場合は、購入時にフォームの「ラッピングを希望」にチェックを入れてください。 </p>
+          <details class="details">
+            <summary class="details__summary">プレゼント用にラッピングすることはできますか？</summary>
+            <p class="details__cont">可能です。ラッピングが必要な場合は、購入時にフォームの「ラッピングを希望」にチェックを入れてください。 </p>
           </details>
-          <details class="">
-            <summary class="">いちご狩りの予約は必要ですか</summary>
-            <p class="">繁忙期（１～３月、GW期間中）の土日祝日は予約はご遠慮いただいておりますが、平日または繁忙期以外の土日祝日はご予約可能です。</p>
+          <details class="details">
+            <summary class="details__summary">いちご狩りの予約は必要ですか</summary>
+            <p class="details__cont">繁忙期（１～３月、GW期間中）の土日祝日は予約はご遠慮いただいておりますが、平日または繁忙期以外の土日祝日はご予約可能です。</p>
           </details>
-          <details class="">
-            <summary class="">海外発送できますか？</summary>
-            <p class="">現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。</p>
+          <details class="details">
+            <summary class="details__summary">海外発送できますか？</summary>
+            <p class="details__cont">現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。</p>
           </details>
         </div>
       </div>
@@ -236,7 +242,7 @@
         <!-- <picture>
           <img src="img/breakfast-middle.jpg" alt="#">
         </picture> -->
-        <h2 class="access__ttl">アクセス</h2>
+        <h2 class="tittle">アクセス</h2>
         <div class="access__cont">
           <div class="access__map">
             <iframe
@@ -269,7 +275,7 @@
     </section>
     <section class="contact">
       <div class="container">
-        <h2 class="contact__ttl">お問い合わせ</h2>
+        <h2 class="tittle">お問い合わせ</h2>
         <p>ご購入・販売に関しましては、下記よりお気軽にお問い合わせください。</p>
         <div class="contact__form">
           <h3 class="contact__formTtl">お問い合わせメールフォーム</h3>
@@ -410,6 +416,42 @@
       <div class="copy">©︎ 2019 GOTONOUEN.</div>
     </div>
   </footer>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog01.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog02.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog03.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script>
+        const swiper = new Swiper(".swiper", {
+          loop: true, // ループ
+          speed: 1500, // 少しゆっくり(デフォルトは300)
+          autoplay: { // 自動再生
+            delay: 1000, // 1秒後に次のスライド
+            disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+          },
+          // ページネーション
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // 前後の矢印
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script> -->
+  <script src="script.js"></script>
+
 </body>
 
 </html>
