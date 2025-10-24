@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>長野県茅野市の農園 | 蓼科ごとう農園</title>
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@
     <section class="about">
       <div class="container">
         <h2 class="about__ttl">蓼科の生きた豊かな恵みを<br class="sp-only">そのままに</h2>
-        <div class="swiper">
+        <div class="swiper" id="about__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="img/about-01.jpg" alt="#">
@@ -212,7 +212,42 @@
       <div class="container">
         <h2 class="tittle">FAQ</h2>
         <div class="faq__area">
-          <details class="details">
+          <button class="faq__btn">冷蔵便で配送できますか？</button>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <p>冷蔵便に対応しています。その場合別途150円かかります。</p>
+            </li>
+          </ul>
+          <button class="faq__btn">どのような支払い方法がありますか？</button>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <p>
+                商品代引きとクレジットカード決済があります。代引き手数料は、10,800円未満で税込330円・10,800円以上32,400円未満で税込440円・32,400円以上102,400円未満で税込660円です。手数料はお客様のご負担となりますのでご了承ください。クレジットカード決済は、JCB・VISA・master・ダイナース・アメリカンエキスプレスのマークが入っているカードすべてご利用になれます。
+              </p>
+            </li>
+          </ul>
+          <button class="faq__btn">プレゼント用にラッピングすることはできますか？</button>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <p>可能です。ラッピングが必要な場合は、購入時にフォームの「ラッピングを希望」にチェックを入れてください。</p>
+            </li>
+          </ul>
+          <button class="faq__btn">いちご狩りの予約は必要ですか？</button>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <p>繁忙期（１～３月、GW期間中）の土日祝日は予約はご遠慮いただいておりますが、平日または繁忙期以外の土日祝日はご予約可能です。</p>
+            </li>
+          </ul>
+          <button class="faq__btn">海外発送できますか？</button>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <p>現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- <details class="details">
             <summary class="details__summary">冷蔵便で配送できますか？</summary>
             <p class="details__cont">冷蔵便に対応しています。その場合別途150円かかります。</p>
           </details>
@@ -233,40 +268,40 @@
           <details class="details">
             <summary class="details__summary">海外発送できますか？</summary>
             <p class="details__cont">現在のところ対応できておりません。海外からのご注文で日本国内への発送は承っております。</p>
-          </details>
-        </div>
-      </div>
+          </details> -->
+
     </section>
     <section class="access">
       <div class="container">
-        <!-- <picture>
-          <img src="img/breakfast-middle.jpg" alt="#">
-        </picture> -->
         <h2 class="tittle">アクセス</h2>
         <div class="access__cont">
           <div class="access__map">
+            <!-- <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103202.70337326903!2d138.18922496466038!3d36.06704346748343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c4e5d08f6a63d%3A0xf7d929f1922a7056!2z44CSMzkxLTAzMDEg6ZW36YeO55yM6IyF6YeO5biC5YyX5bGx!5e0!3m2!1sja!2sjp!4v1760938129071!5m2!1sja!2sjp"
+              width="100%" height="257" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103271.42912546259!2d138.24310125!3d36.01462375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c4fe3a25c43d7%3A0x3b95b26d7026e048!2z6ZW36YeO55yM6IyF6YeO5biC!5e0!3m2!1sja!2sjp!4v1757326740072!5m2!1sja!2sjp"
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209723.43864670955!2d133.69584587219921!3d34.782569478501806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554035805ff0989%3A0x3a77ccc23e970615!2z5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy6!5e0!3m2!1sja!2sjp!4v1761283601135!5m2!1sja!2sjp"
+              width="100%" height="257" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="access__text">
             <ul class="access__list">
               <li class="access__item">
-                <p>会社名</p>
-                <p>蓼科ごとう農園</p>
+                <p class="list__ttl">会社名</p>
+                <p class="list__cont">蓼科ごとう農園</p>
               </li>
               <li class="access__item">
-                <p>代表者名</p>
-                <p>後藤 優香</p>
+                <p class="list__ttl">代表者名</p>
+                <p class="list__cont">後藤 優香</p>
               </li>
               <li class="access__item">
-                <p>所在地</p>
-                <p>長野県茅野市北山×××××</p>
+                <p class="list__ttl">所在地</p>
+                <p class="list__cont">長野県茅野市北山×××××</p>
               </li>
-              <li class="access__item" r>
-                <p>E-mail</p>
-                <p>tateshina-goto@gmail.com</p>
+              <li class="access__item">
+                <p class="list__ttl">E-mail</p>
+                <p class="list__cont">tateshina-goto@gmail.com</p>
               </li>
             </ul>
           </div>
@@ -276,7 +311,7 @@
     <section class="contact">
       <div class="container">
         <h2 class="tittle">お問い合わせ</h2>
-        <p>ご購入・販売に関しましては、下記よりお気軽にお問い合わせください。</p>
+        <p>ご購入・販売に関しましては、<br class="sp-only">下記よりお気軽にお問い合わせください。</p>
         <div class="contact__form">
           <h3 class="contact__formTtl">お問い合わせメールフォーム</h3>
           <form action="#">
@@ -329,7 +364,7 @@
                 </th>
                 <td>
                   <div class="inputField">
-                    <input type="text" name="address__number">
+                    <input class="address__number" type="text" name="address__number">
                   </div>
                 </td>
               </tr>
@@ -383,6 +418,16 @@
             </div>
           </form>
         </div>
+        <div class="">
+          <h1>お問い合わせメールフォーム</h1>
+          <p>
+            送信完了しました。<br>
+            ありがとうございました。
+          </p>
+          <a href="input.php">
+            <button type="button">お問い合わせに戻る</button>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -413,10 +458,10 @@
           </li>
         </ul>
       </nav>
-      <div class="copy">©︎ 2019 GOTONOUEN.</div>
+      <div class="copyright">©︎ 2019 GOTONOUEN.</div>
     </div>
   </footer>
-  <div class="swiper">
+  <!-- <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog01.jpg" alt="" />
@@ -428,7 +473,7 @@
         <img src="https://junpei-sugiyama.com/wp-content/uploads/2021/01/dog03.jpg" alt="" />
       </div>
     </div>
-  </div>
+  </div> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- <script>
         const swiper = new Swiper(".swiper", {

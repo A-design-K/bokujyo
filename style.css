@@ -280,7 +280,8 @@ h1.mv__logo:after {
 
 /* スライドの動き等速 */
 .product .swiper-wrapper {
-  transition-timing-function: linear;
+  /* transition-timing-function: linear; */
+  height: 337px;
 }
 
 .product .swiper-slide {
@@ -301,13 +302,14 @@ h1.mv__logo:after {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 1px;
+  height: 112px;
   padding: 16px 16px 0 16px;
 }
 
 .product__price {
   font-size: 16px;
   font-weight: 400;
-  padding: 14px 124px 16px 16px;
+  padding: 0 124px 16px 16px;
   position: absolute;
   bottom: 0;
 }
@@ -366,6 +368,107 @@ h1.mv__logo:after {
   padding-top: 50px;
 }
 
+.faq__btn {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: start;
+  display: block;
+  cursor: pointer;
+  background: #FFFFFF;
+  width: 100%;
+  padding: 12px 33px;
+  position: relative;
+}
+
+.faq__item {
+  /* 閉じている状態 */
+  padding-top: 0;
+  padding-bottom: 30px;
+  /* 閉じるアニメーション */
+  transition:
+    border-top .3s ease-out,
+    padding-top .3s ease-out,
+    padding-bottom .3s ease-out;
+}
+
+.faq__list.is-open .faq__item {
+  /* 開いている状態 */
+  padding: 20px 8px 30px 8px;
+  /* 開くアニメーション */
+  transition:
+    border-top .3s ease-out,
+    padding-top .3s ease-out,
+    padding-bottom .3s ease-out;
+}
+
+.faq__item p {
+  font-size: 15px;
+  font-weight: 400;
+  /* 閉じている状態 */
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* 閉じるアニメーション */
+  transition:
+    line-height .3s ease-out,
+    opacity .1s linear,
+    visibility .1s linear;
+}
+
+.faq__list.is-open .faq__item p {
+  /* 開いている状態 */
+  line-height: 2;
+  opacity: 1;
+  visibility: visible;
+  /* 開くアニメーション */
+  transition:
+    line-height .3s ease-out,
+    opacity .1s linear .1s,
+    visibility .1s linear .1s;
+}
+
+.faq__btn:before {
+  content: "Q";
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  top: 50%;
+  left: 8px;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+
+.faq__btn:after {
+  content: "";
+  width: 16px;
+  height: 10.12px;
+  display: block;
+  background-image: url(img/Vector.png);
+  right: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.faq:after {
+  content: "";
+  width: 195px;
+  height: 110px;
+  display: block;
+  background-image: url(img/breakfast-middle.png);
+  left: 0;
+  position: absolute;
+  transform: translate(0, 60%);
+}
+
+
+
+
+
+
+
 .details {
   transition: 10s;
   /* open前とopen後の状態をtransitionを利用し10秒で遷移させる */
@@ -377,7 +480,7 @@ h1.mv__logo:after {
   }
 }
 
-.details[open] {
+/* .details[open] {
   margin-top: 0;
 
 }
@@ -427,14 +530,305 @@ h1.mv__logo:after {
 .details__summary:after {
   content: "";
   width: 16px;
-  height: auto;
+  height: 10.12px;
   display: block;
   background-image: url(img/Vector.png);
-  right: 0;
+  right: 8px;
   position: absolute;
-  transform: translate(0, 70%);
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
+.faq:after {
+  content: "";
+  width: 195px;
+  height: 110px;
+  display: block;
+  background-image: url(img/breakfast-middle.png);
+  left: 0;
+  position: absolute;
+  transform: translate(0, 60%);
+} */
+
+
+/* access */
+
+.access {
+  padding: 100px 0 120px 0;
+  background: #fff;
+}
+
+.access__cont {
+  padding-top: 50px;
+}
+
+.access__text {
+  padding-top: 50px;
+}
+
+.access__item {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #C6C6C6;
+  padding: 20px 0;
+}
+
+.access__item:nth-of-type(4) {
+  border-bottom: 1px solid #C6C6C6;
+
+}
+
+.access__item p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.list__ttl {
+  padding-left: 8px;
+  width: 35%;
+}
+
+.list__cont {
+  width: 65%;
+}
+
+
+.access:after {
+  content: "";
+  width: 176px;
+  height: 100px;
+  display: block;
+  background-image: url(img/Brussels_sprouts-middle.png);
+  right: 0;
+  position: absolute;
+  transform: translate(0, 60%);
+}
+
+
+/* contact */
+
+.contact {
+  padding-top: 100px;
+}
+
+.contact p {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact__form {
+  background: #fff;
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 30px 8px 100px 8px;
+}
+
+.contact__formTtl {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact__table tr {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.contact__table th {
+  text-align: start;
+}
+
+.inputLabel {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 50px 0 5px 0;
+}
+
+.inputLabel span {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 10px;
+  padding: 6.5px 11px;
+  margin-left: 18px;
+  background: #FED966;
+}
+
+.require {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10px;
+  padding: 6.5px 11px;
+  margin-left: 18px;
+  background: #FED966;
+}
+
+.inputField {
+  padding-top: 15px;
+}
+
+.radioList {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label span {
+  font-size: 16px;
+}
+
+input[type="radio"]+span {
+  display: inline-block;
+  padding: 1.5px 0 1.5px 15px;
+  vertical-align: text-top;
+  cursor: pointer;
+}
+
+input[type="radio"]+span:before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4E301B;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+input[type="radio"]:checked+span:after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+  border-radius: 50%;
+  background: #4E301B;
+  line-height: 1;
+}
+
+th label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+table.contact__table {
+  display: block;
+}
+
+tbody {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background: #EFEAE6;
+  border: none;
+}
+
+.inputField .address__number {
+  width: 157px;
+}
+
+textarea {
+  height: 170px;
+}
+
+.buttonArea {
+  text-align: center;
+}
+
+input[type="submit"] {
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 14px 93.5px;
+  background: #FED966;
+  border: none;
+}
+
+
+/* footer */
+
+footer {
+  margin-top: 50px;
+  background: #fff;
+}
+
+footer .container {
+  padding: 0;
+  max-width: none;
+  position: relative;
+}
+
+.footer__logo {
+  text-align: center;
+}
+
+.footer__logo img {
+  margin-top: 50px;
+  width: 270px;
+}
+
+.footer__nav {
+  margin: 60px 0 153px 0;
+}
+
+.footer__nav:before {
+  content: "";
+  width: 183px;
+  height: 103px;
+  display: block;
+  background-image: url(img/strawberry-middle.png);
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, -58%);
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer__item a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer__nav:after {
+  content: "";
+  width: 146px;
+  height: 100px;
+  display: block;
+  background-image: url(img/livestock-middle.png);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, -58%);
+}
+
+.copyright {
+  font-size: 12px;
+  font-weight: 400;
+  background: #D9D9D9;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
 
 
 
