@@ -58,3 +58,27 @@ const swiper_2 = new Swiper("#product__swiper", {
   },
 });
 
+$(function () {
+  // ナビゲーションをクリック
+  $("a[href^='#']:not([href='#'])").click(function () {
+    // 移動先のコンテンツの位置を取得
+    var target = $($(this).attr("href")).offset().top;
+
+    // スクロールされる位置padding100pxのうち
+    target -= -30;
+
+    // コンテンツへスクロール
+    $("html, body").animate({ scrollTop: target }, 500);
+
+    //  ハンバーガーメニューを閉じる
+    $(".spMenu__wrapper").removeClass("open");
+    $(".spMenu__btn").removeClass("open");
+
+
+    // クリック時の処理
+    return false;
+
+  });
+});
+
+
